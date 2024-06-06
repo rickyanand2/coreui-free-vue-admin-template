@@ -1,4 +1,7 @@
 export default [
+  
+  // Dashboard Item ##################
+    
   {
     component: 'CNavItem',
     name: 'Dashboard',
@@ -9,6 +12,10 @@ export default [
       text: 'NEW',
     },
   },
+
+  
+  // Theme Title and Items ##################
+
   {
     component: 'CNavTitle',
     name: 'Theme',
@@ -25,6 +32,9 @@ export default [
     to: '/theme/typography',
     icon: 'cil-pencil',
   },
+
+  // Components Title and Base Group ##################
+
   {
     component: 'CNavTitle',
     name: 'Components',
@@ -107,6 +117,8 @@ export default [
       },
     ],
   },
+
+  // Buttons Group ##################
   {
     component: 'CNavGroup',
     name: 'Buttons',
@@ -130,6 +142,8 @@ export default [
       },
     ],
   },
+
+  // Forms Group ##################
   {
     component: 'CNavGroup',
     name: 'Forms',
@@ -178,12 +192,16 @@ export default [
       },
     ],
   },
+
+  // Charts Items ##################
   {
     component: 'CNavItem',
     name: 'Charts',
     to: '/charts',
     icon: 'cil-chart-pie',
   },
+
+  // Icons Group ##################
   {
     component: 'CNavGroup',
     name: 'Icons',
@@ -211,6 +229,8 @@ export default [
       },
     ],
   },
+
+  // Notifications Group ##################
   {
     component: 'CNavGroup',
     name: 'Notifications',
@@ -239,6 +259,9 @@ export default [
       },
     ],
   },
+
+  // Widgets Item ##################
+
   {
     component: 'CNavItem',
     name: 'Widgets',
@@ -250,6 +273,9 @@ export default [
       shape: 'pill',
     },
   },
+
+  // Extras Title and Pages Group ################## 
+
   {
     component: 'CNavTitle',
     name: 'Extras',
@@ -282,4 +308,24 @@ export default [
       },
     ],
   },
+
+   // Adding new Scan related items #############################
+   // Scan Items
+   {
+    component: 'CNavTitle',
+    name: 'Scans',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Scan List',
+    to: '/scan-list',
+    icon: 'cil-list',
+  },
+  {
+    component: 'CNavItem',
+    name: 'Report',
+    to: '/report',
+    icon: 'cil-file',
+  },
+
 ]

@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import DefaultLayout from '@/layouts/DefaultLayout'
 
 const routes = [
+  // PART 1 of const routes - Home
   {
     path: '/',
     name: 'Home',
@@ -21,6 +22,21 @@ const routes = [
             /* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue'
           ),
       },
+
+      // New created and Added scans Views #######################
+      // Scan routes
+      {
+        path: '/scan-list',
+        name: 'ScanList',
+        component: () => import('@/views/scans/ScanList.vue'),
+      },
+      {
+        path: '/report',
+        name: 'Report',
+        component: () => import('@/views/scans/Report.vue'),
+      },
+      
+      // Theme Routes #########################
       {
         path: '/theme',
         name: 'Theme',
@@ -36,6 +52,8 @@ const routes = [
         name: 'Typography',
         component: () => import('@/views/theme/Typography.vue'),
       },
+
+      // Base Routes #########################
       {
         path: '/base',
         name: 'Base',
@@ -118,6 +136,8 @@ const routes = [
           },
         ],
       },
+
+      // Button Routes #########################
       {
         path: '/buttons',
         name: 'Buttons',
@@ -145,6 +165,8 @@ const routes = [
           },
         ],
       },
+
+      // Form Routes #########################
       {
         path: '/forms',
         name: 'Forms',
@@ -197,11 +219,15 @@ const routes = [
           },
         ],
       },
+
+      // Charts Routes #########################
       {
         path: '/charts',
         name: 'Charts',
         component: () => import('@/views/charts/Charts.vue'),
       },
+
+      // Icon Routes #########################
       {
         path: '/icons',
         name: 'Icons',
@@ -229,6 +255,8 @@ const routes = [
           },
         ],
       },
+
+      // Notification Routes #########################
       {
         path: '/notifications',
         name: 'Notifications',
@@ -261,13 +289,20 @@ const routes = [
           },
         ],
       },
+
+      // Widgets Routes #########################
       {
         path: '/widgets',
         name: 'Widgets',
         component: () => import('@/views/widgets/Widgets.vue'),
       },
+      
     ],
   },
+
+  // PART 2 of const routes
+  // Pages 404 Routes #########################
+
   {
     path: '/pages',
     redirect: '/pages/404',
